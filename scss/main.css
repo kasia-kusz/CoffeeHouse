@@ -14,6 +14,10 @@ body {
   height: 100vh;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .main-showcase:before {
   content: '';
   background: url("../assets/showcase.jpg") no-repeat center center/cover;
@@ -74,6 +78,9 @@ body {
 }
 
 .item img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: calc(100% - 8px);
   max-width: 100%;
   max-height: 100%;
@@ -91,5 +98,50 @@ body {
 .introduce p {
   color: #6e5710;
   font-size: 1.3rem;
+}
+
+.comment {
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.comment h2 {
+  color: #d4af37;
+  font-size: 3rem;
+}
+
+.comment .opinion {
+  font-size: 1.4rem;
+  color: #6e5710;
+  line-height: 1.7rem;
+  margin-top: 2rem;
+}
+
+.comment .customer-img {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 2rem;
+}
+
+.comment .customer-name {
+  color: #d4af37;
+  font-size: 1.8rem;
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

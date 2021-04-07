@@ -9,6 +9,7 @@
 //   phone: "431px",
 //   phone_small: "376px",
 // }
+// @media screen and (max-width: 1480px) { ... }
 
 $dark-color : #333;
 $primary-color:#d4af37;
@@ -30,6 +31,10 @@ body{
 
 .showcase{
   height: 100vh;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .main-showcase{
@@ -85,6 +90,8 @@ padding: 3rem 0;
 
 .item{
   & img{
+    height: 100%;
+    object-fit: cover;
     width: calc(100% - 8px);
     max-width: 100%;
     max-height: 100%;
@@ -101,5 +108,37 @@ width: 50%;
   & p{
     color: $secondary-color;
     font-size: 1.3rem;
+  }
+}
+
+.comment{
+  height: 400px;
+  display:flex;
+  flex-flow: column;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+
+  & h2{
+    color: #d4af37;
+    font-size: 3rem;
+  }
+  .opinion{
+    font-size: 1.4rem;
+    color: #6e5710;
+    line-height: 1.7rem;
+    margin-top: 2rem;
+  }
+  .customer-img{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    margin-top: 2rem;
+  }
+  .customer-name{
+    color: #d4af37;
+    font-size: 1.8rem;
+    margin-top: 1rem;
   }
 }
