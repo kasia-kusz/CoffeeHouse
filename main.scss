@@ -65,7 +65,7 @@ body {
   }
   @media screen and (max-width: #{$tablet-big}) {
     max-width: 729px;
-    // wyliczone z proporcji czyli skoro dla 1600 jest 1080px,
+    // wyliczone z proporcji czyli skoro dla 1600 jest 1080px
   }
   @media screen and (max-width: #{$tablet-small}) {
     max-width: 495px;
@@ -139,7 +139,8 @@ body {
   @media screen and (max-width: #{$tablet_big}) {
     width: 100%;
     align-items: center;
-    padding: 0 40px;
+    padding:0;
+   // padding: 0 40px;
   }
 
   .title {
@@ -172,6 +173,10 @@ body {
     font-size: 1.7rem;
     line-height: 1.8;
     max-width: 500px;
+    @media screen and (max-width: #{$tablet_big}) {
+     text-align: center;
+     padding: 0 20px;
+    }
   }
 }
 
@@ -229,16 +234,7 @@ body {
       margin-top: 30px;
     }
     margin-right: 0;
-    height: 350px;
-    width: 350px;
-  }
-  @media screen and (max-width: #{$phone}) {
-    height: 320px;
-    width: 320px;
-  }
-  @media screen and (max-width: #{$phone-small}) {
-    height: 300px;
-    width: 300px;
+    width: 100%;
   }
 }
 
@@ -272,4 +268,7 @@ body {
     font-size: 1.8rem;
     margin-top: 1rem;
   }
+  @media screen and (max-width: #{$phone-big}) {
+    padding: 0 20px;
+   }
 }
