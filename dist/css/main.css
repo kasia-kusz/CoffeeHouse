@@ -44,6 +44,11 @@ body {
   width: 100%;
 }
 
+.bgGrey {
+  background-color: #ccc;
+  width: 100%;
+}
+
 .showcase {
   height: 100vh;
 }
@@ -254,4 +259,13 @@ body {
   .comment {
     padding: 0 20px;
   }
+}
+
+.houseMenu {
+  display: flex;
+  margin: 0;
+}
+
+.houseMenu .menuItem {
+  background-color: #fafafa;
 }

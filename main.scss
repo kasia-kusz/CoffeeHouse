@@ -78,6 +78,11 @@ body {
   width: 100%;
 }
 
+.bgGrey {
+  background-color: #ccc;
+  width: 100%;
+}
+
 .showcase {
   height: 100vh;
 }
@@ -271,4 +276,13 @@ body {
   @media screen and (max-width: #{$phone-big}) {
     padding: 0 20px;
    }
+}
+
+.houseMenu{
+  display: flex;
+  margin: 0;
+  //background-color: $text;
+  .menuItem{
+    background-color: $light-white;
+  }
 }
