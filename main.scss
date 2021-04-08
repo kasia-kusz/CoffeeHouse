@@ -9,7 +9,13 @@
 //   phone: "431px",
 //   phone_small: "376px",
 // }
-// @media screen and (max-width: 1480px) { ... }
+//
+// 1	640 × 360 (nHD)
+// 2	960 × 540 (qHD)
+// 3	1280 × 720 (HD)
+// 4	1280 × 1080
+// 5	1600 × 900 (HD+)
+// 6	1920 × 1080 (FHD)
 
 $dark-color: #333;
 $primary-color: #d4af37;
@@ -38,8 +44,6 @@ $phone_small: "376px";
   font-size: 10px;
 }
 
-// @media screen and (max-width: 1480px) { }
-
 body {
   background-color: $dark-color;
 }
@@ -55,6 +59,18 @@ body {
     max-width: 1080px;
     // wyliczone z proporcji czyli skoro dla 1920 jest 1400px, to liczysz 1920/1400 = 1,371428571428571 wiec dla 1400/1,371428571428571 jest 1080px
   }
+  @media screen and (max-width: #{$laptop-small}) {
+    max-width: 972px;
+    // 729/3=243 wynik wyżej 729+243=927
+  }
+  @media screen and (max-width: #{$tablet-big}) {
+    max-width: 729px;
+    // wyliczone z proporcji czyli skoro dla 1600 jest 1080px,
+  }
+  // @media screen and (max-width: #{$phone-big}) {
+  //   max-width: 495px;
+  //   //729/601=1.21297836938 a 601/1.21297836938=495px
+  // }
 }
 
 .bgWhite {
@@ -136,6 +152,8 @@ body {
       width: 50px;
       background-color: $primary-color;
     }
+    //przy małej rozdzielczości tytuł idzie na środek łącznie z kreską pod nim
+    //kreska zostaje przesunięta o 50% a następnie przesunięta w drugą stronę o połowe swej długości
     @media screen and (max-width: #{$tablet_big}) {
       &::after {
         left: 50%;
