@@ -262,10 +262,49 @@ body {
 }
 
 .houseMenu {
-  display: flex;
   margin: 0;
 }
 
 .houseMenu .menuItem {
+  display: flex;
   background-color: #fafafa;
+  height: 300px;
+}
+
+.houseMenu .menuItem .menuText {
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.houseMenu .menuItem .menuText .menuTitle {
+  color: #d4af37;
+  font-size: 2.5rem;
+  margin-bottom: 8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.houseMenu .menuItem .menuText .menuTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -4rem;
+  left: 0;
+  height: 2px;
+  width: 50px;
+  background-color: #d4af37;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.houseMenu .menuItem .menuText .menuDescription {
+  color: #6e5710;
+  font-size: 1.7rem;
+}
+
+.houseMenu .menuItem .menuImage {
+  width: 50%;
+  height: 100%;
+  background: url("../assets/icecoffee.jpg") no-repeat center center/cover;
 }
