@@ -291,9 +291,15 @@ body {
     &.reverse {
       flex-direction: row-reverse;
       @media screen and (max-width: #{$tablet_small}) {
-        flex-direction: row;
+        //flex-direction: row;
+        flex-direction: column;
       }
     }
+    @media screen and (max-width: #{$tablet_small}) {
+      flex-direction: column;
+      height: 500px;
+    }
+
     .menuText {
       display: flex;
       flex-direction: column;
@@ -324,11 +330,17 @@ body {
         color: $secondary-color;
         font-size: 1.7rem;
       }
+      @media screen and (max-width: #{$tablet_small}) {
+        width: 100%;
+      }
     }
     .menuImage {
       width: 50%;
       height: 100%;
       background: url("../assets/icecoffee.jpg") no-repeat center center/cover;
+      @media screen and (max-width: #{$tablet_small}) {
+        width: 100%;
+      }
     }
   }
 }

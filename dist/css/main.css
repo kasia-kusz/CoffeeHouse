@@ -277,7 +277,14 @@ body {
 
 @media screen and (max-width: 769px) {
   .houseMenu .menuItem.reverse {
-    flex-direction: row;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .houseMenu .menuItem {
+    flex-direction: column;
+    height: 500px;
   }
 }
 
@@ -316,8 +323,20 @@ body {
   font-size: 1.7rem;
 }
 
+@media screen and (max-width: 769px) {
+  .houseMenu .menuItem .menuText {
+    width: 100%;
+  }
+}
+
 .houseMenu .menuItem .menuImage {
   width: 50%;
   height: 100%;
   background: url("../assets/icecoffee.jpg") no-repeat center center/cover;
+}
+
+@media screen and (max-width: 769px) {
+  .houseMenu .menuItem .menuImage {
+    width: 100%;
+  }
 }
