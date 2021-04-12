@@ -275,6 +275,12 @@ body {
   flex-direction: row-reverse;
 }
 
+@media screen and (max-width: 769px) {
+  .houseMenu .menuItem.reverse {
+    flex-direction: row;
+  }
+}
+
 .houseMenu .menuItem .menuText {
   display: flex;
   flex-direction: column;

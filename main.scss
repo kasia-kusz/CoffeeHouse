@@ -17,6 +17,8 @@
 // 5	1600 × 900 (HD+)
 // 6	1920 × 1080 (FHD)
 
+//tekst 12-14 px a na telefonie nie mniej niż 10px, header dowolnie
+
 $dark-color: #333;
 $primary-color: #d4af37;
 $secondary-color: #6e5710;
@@ -288,7 +290,9 @@ body {
 
     &.reverse {
       flex-direction: row-reverse;
-      //od tablet small flex-firection: row;
+      @media screen and (max-width: #{$tablet_small}) {
+        flex-direction: row;
+      }
     }
     .menuText {
       display: flex;
