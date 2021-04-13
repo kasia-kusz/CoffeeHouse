@@ -261,6 +261,12 @@ body {
   }
 }
 
+@media screen and (max-width: 431px) {
+  .sectionHouse {
+    padding: 0;
+  }
+}
+
 .houseMenu {
   margin: 0;
 }

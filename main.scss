@@ -280,6 +280,12 @@ body {
   }
 }
 
+.sectionHouse{
+  @media screen and (max-width: #{$phone}) {
+    padding:0;
+   }
+}
+
 .houseMenu {
   margin: 0;
   //background-color: $text;
