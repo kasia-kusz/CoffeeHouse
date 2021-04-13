@@ -346,3 +346,78 @@ body {
     width: 100%;
   }
 }
+
+.bg-galShowcase {
+  position: relative;
+}
+
+.bg-galShowcase:before {
+  content: "";
+  background: url("../assets/barman.jpg") no-repeat center center/cover;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-galShowcase .galleryShowcase .galleryText {
+  padding: 0 60px 30px 60px;
+}
+
+.bg-galShowcase .galleryShowcase .galleryText .galleryTitle {
+  color: #d4af37;
+  font-size: 2.8rem;
+  padding-bottom: 20px;
+}
+
+.bg-galShowcase .galleryShowcase .galleryText .galleryDescription {
+  color: #e1ecf5;
+  font-size: 1.4rem;
+  padding-bottom: 40px;
+  line-height: 2rem;
+}
+
+.bg-galShowcase .galleryShowcase .galleryBox {
+  display: flex;
+}
+
+.bg-galShowcase .galleryShowcase .galleryBox .galleryWrapper {
+  display: flex;
+}
+
+.bg-galShowcase .galleryShowcase .galleryBox .galleryWrapper .galleryImg {
+  width: calc(33.333% - 9px);
+  border-radius: 10px;
+}
+
+.bg-galShowcase .galleryShowcase .galleryBox .galleryWrapper .galleryImg:not(:last-child) {
+  margin-right: 15px;
+}
+
+.bg-galShowcase .galleryShowcase .galleryBox .galleryArrow {
+  display: flex;
+  color: #e1ecf5;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.bg-galShowcase .galleryShowcase .btn {
+  display: flex;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.bg-galShowcase .galleryShowcase .btn .btn-golden {
+  cursor: pointer;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 7px 14px;
+  background: rgba(37, 37, 37, 0);
+  border-radius: 15px;
+}

@@ -280,10 +280,10 @@ body {
   }
 }
 
-.sectionHouse{
+.sectionHouse {
   @media screen and (max-width: #{$phone}) {
-    padding:0;
-   }
+    padding: 0;
+  }
 }
 
 .houseMenu {
@@ -346,6 +346,75 @@ body {
       background: url("../assets/icecoffee.jpg") no-repeat center center/cover;
       @media screen and (max-width: #{$tablet_small}) {
         width: 100%;
+      }
+    }
+  }
+}
+
+.bg-galShowcase {
+  position: relative;
+  &:before {
+    content: "";
+    background: url("../assets/barman.jpg") no-repeat center center/cover;
+    opacity: 0.2;
+     position: absolute;
+     top: 0;
+     left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .galleryShowcase {
+    .galleryText {
+      padding: 0 60px 30px 60px;
+      .galleryTitle {
+        color: $primary-color;
+        font-size: 2.8rem;
+        padding-bottom: 20px;
+      }
+      .galleryDescription {
+        color: $text;
+        font-size: 1.4rem;
+        padding-bottom: 40px;
+        line-height: 2rem;
+      }
+    }
+    .galleryBox {
+      display: flex;
+      //height: 50px;
+      .galleryWrapper {
+        display: flex;
+        .galleryImg {
+          width: calc(33.333% - 9px);
+          border-radius: 10px;
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+        }
+      }
+      .galleryArrow {
+        display: flex;
+        color: $text;
+        padding: 0 10px;
+        align-items: center;
+      }
+    }
+    .btn {
+      display: flex;
+      padding-top: 30px;
+      justify-content: center;
+      .btn-golden {
+        cursor: pointer;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 7px 14px;
+        //zero na końcu dla przezroczystości
+        background: rgba(37, 37, 37, 0);
+        border-radius: 15px;
       }
     }
   }
