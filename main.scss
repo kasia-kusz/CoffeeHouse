@@ -9,7 +9,15 @@
 //   phone: "431px",
 //   phone_small: "376px",
 // }
-// @media screen and (max-width: 1480px) { ... }
+//
+// 1	640 × 360 (nHD)
+// 2	960 × 540 (qHD)
+// 3	1280 × 720 (HD)
+// 4	1280 × 1080
+// 5	1600 × 900 (HD+)
+// 6	1920 × 1080 (FHD)
+
+//tekst 12-14 px a na telefonie nie mniej niż 10px, header dowolnie
 
 $dark-color: #333;
 $primary-color: #d4af37;
@@ -38,8 +46,6 @@ $phone_small: "376px";
   font-size: 10px;
 }
 
-// @media screen and (max-width: 1480px) { }
-
 body {
   background-color: $dark-color;
 }
@@ -55,10 +61,27 @@ body {
     max-width: 1080px;
     // wyliczone z proporcji czyli skoro dla 1920 jest 1400px, to liczysz 1920/1400 = 1,371428571428571 wiec dla 1400/1,371428571428571 jest 1080px
   }
+  @media screen and (max-width: #{$laptop-small}) {
+    max-width: 972px;
+    // 729/3=243 wynik wyżej 729+243=927
+  }
+  @media screen and (max-width: #{$tablet-big}) {
+    max-width: 729px;
+    // wyliczone z proporcji czyli skoro dla 1600 jest 1080px
+  }
+  @media screen and (max-width: #{$tablet-small}) {
+    max-width: 495px;
+    //729/601=1.21297836938 a 601/1.21297836938=495px
+  }
 }
 
 .bgWhite {
   background-color: $light-white;
+  width: 100%;
+}
+
+.bgGrey {
+  background-color: #ccc;
   width: 100%;
 }
 
@@ -115,10 +138,16 @@ body {
   width: 50%;
   display: flex;
   flex-direction: column;
+  padding-right: 80px;
 
+  @media screen and (max-width: #{$laptop-small}) {
+    padding-right: 50px;
+  }
   @media screen and (max-width: #{$tablet_big}) {
     width: 100%;
     align-items: center;
+    padding: 0;
+    // padding: 0 40px;
   }
 
   .title {
@@ -136,6 +165,8 @@ body {
       width: 50px;
       background-color: $primary-color;
     }
+    //przy małej rozdzielczości tytuł idzie na środek łącznie z kreską pod nim
+    //kreska zostaje przesunięta o 50% a następnie przesunięta w drugą stronę o połowe swej długości
     @media screen and (max-width: #{$tablet_big}) {
       &::after {
         left: 50%;
@@ -146,9 +177,13 @@ body {
 
   .text {
     color: gray;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     line-height: 1.8;
     max-width: 500px;
+    @media screen and (max-width: #{$tablet_big}) {
+      text-align: center;
+      padding: 0 20px;
+    }
   }
 }
 
@@ -163,6 +198,10 @@ body {
     margin-top: 80px;
     width: 100%;
   }
+  @media screen and (max-width: #{$phone-big}) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .imageWrapper {
@@ -170,7 +209,6 @@ body {
   width: calc(33.33333% - 8px);
   &:not(:nth-child(3n)) {
     // odwolujemy sie zawsze w dziecku
-
     margin-right: 12px;
     // czyli nie bierzemy itema bedacego co 3 dzieckiem swojego rodzica
   }
@@ -195,6 +233,16 @@ body {
 
     width: calc(50% - 12px);
   }
+  @media screen and (max-width: #{$phone-big}) {
+    &:not(:nth-child(2n)) {
+      margin-right: 0;
+    }
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 .comment {
@@ -207,12 +255,12 @@ body {
 
   & h2 {
     color: #d4af37;
-    font-size: 3rem;
+    font-size: 3.3rem;
   }
   .opinion {
-    font-size: 1.4rem;
-    color: #6e5710;
-    line-height: 1.7rem;
+    font-size: 1.7rem;
+    color: $text;
+    line-height: 2.2rem;
     margin-top: 2rem;
   }
   .customer-img {
@@ -226,5 +274,79 @@ body {
     color: #d4af37;
     font-size: 1.8rem;
     margin-top: 1rem;
+  }
+  @media screen and (max-width: #{$phone-big}) {
+    padding: 0 20px;
+  }
+}
+
+.sectionHouse{
+  @media screen and (max-width: #{$phone}) {
+    padding:0;
+   }
+}
+
+.houseMenu {
+  margin: 0;
+  //background-color: $text;
+  .menuItem {
+    display: flex;
+    background-color: $light-white;
+    height: 300px;
+
+    &.reverse {
+      flex-direction: row-reverse;
+      @media screen and (max-width: #{$tablet_small}) {
+        //flex-direction: row;
+        flex-direction: column;
+      }
+    }
+    @media screen and (max-width: #{$tablet_small}) {
+      flex-direction: column;
+      height: 500px;
+    }
+
+    .menuText {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      .menuTitle {
+        color: $primary-color;
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+        position: relative;
+        display: inline-block;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -2rem;
+          left: 0;
+          height: 2px;
+          width: 50px;
+          background-color: $primary-color;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .menuDescription {
+        color: $secondary-color;
+        font-size: 1.7rem;
+      }
+      @media screen and (max-width: #{$tablet_small}) {
+        width: 100%;
+      }
+    }
+    .menuImage {
+      width: 50%;
+      height: 100%;
+      background: url("../assets/icecoffee.jpg") no-repeat center center/cover;
+      @media screen and (max-width: #{$tablet_small}) {
+        width: 100%;
+      }
+    }
   }
 }
