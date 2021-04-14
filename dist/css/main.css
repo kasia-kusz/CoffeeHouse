@@ -461,7 +461,7 @@ body {
 }
 
 .footer .contact .footerHeader {
-  font-size: 3.5rem;
+  font-size: 3.9rem;
   color: #d4af37;
   margin-bottom: 6rem;
   position: relative;
@@ -494,8 +494,14 @@ body {
 
 .footer .contact .footerText .textWrap .iconDescription {
   display: inline;
-  font-size: 1.5rem;
+  font-size: 2.0rem;
   padding-left: 15px;
+}
+
+@media screen and (max-width: 867px) {
+  .footer .contact .footerText .textWrap .iconDescription {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 867px) {
@@ -511,8 +517,9 @@ body {
 }
 
 .footer .map .map-img {
-  max-width: 500px;
+  max-height: 400px;
   width: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 867px) {

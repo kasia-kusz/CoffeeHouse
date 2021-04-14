@@ -453,7 +453,7 @@ body {
   .contact {
     width: 50%;
     .footerHeader {
-      font-size: 3.5rem;
+      font-size: 3.9rem;
       color: $primary-color;
       margin-bottom: 6rem;
       position: relative;
@@ -479,8 +479,11 @@ body {
         color: $dark-color;
         .iconDescription {
           display: inline;
-          font-size: 1.5rem;
+          font-size: 2.0rem;
           padding-left: 15px;
+          @media screen and (max-width: #{$tablet}) {
+            font-size: 1.5rem;
+          }
         }
       }
     }
@@ -493,8 +496,9 @@ body {
   .map {
     width: 50%;
     .map-img {
-      max-width: 500px;
+      max-height: 400px;
       width: 100%;
+      object-fit: cover;
     }
     @media screen and (max-width: #{$tablet}) {
       width: 100%;
