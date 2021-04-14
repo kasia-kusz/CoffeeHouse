@@ -416,7 +416,7 @@ body {
         //zero na końcu dla przezroczystości
         background: rgba(37, 37, 37, 0);
         border-radius: 15px;
-        &:hover{
+        &:hover {
           background-color: $secondary-color;
         }
       }
@@ -448,6 +448,60 @@ body {
   }
 }
 
-.footer{
-
+.footer {
+  display: flex;
+  .contact {
+    width: 50%;
+    .footerHeader {
+      font-size: 3.5rem;
+      color: $primary-color;
+      margin-bottom: 6rem;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -3rem;
+        left: 0;
+        height: 2px;
+        width: 50px;
+        background-color: $primary-color;
+      }
+      @media screen and (max-width: #{$tablet}) {
+        &::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    .footerText {
+      line-height: 3rem;
+      .textWrap {
+        color: $dark-color;
+        .iconDescription {
+          display: inline;
+          font-size: 1.5rem;
+          padding-left: 15px;
+        }
+      }
+    }
+    @media screen and (max-width: #{$tablet}) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  .map {
+    width: 50%;
+    .map-img {
+      max-width: 500px;
+      width: 100%;
+    }
+    @media screen and (max-width: #{$tablet}) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: #{$tablet}) {
+    flex-direction: column;
+  }
 }

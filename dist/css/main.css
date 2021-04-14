@@ -451,3 +451,79 @@ body {
   background-color: #d4af37;
   outline: none;
 }
+
+.footer {
+  display: flex;
+}
+
+.footer .contact {
+  width: 50%;
+}
+
+.footer .contact .footerHeader {
+  font-size: 3.5rem;
+  color: #d4af37;
+  margin-bottom: 6rem;
+  position: relative;
+}
+
+.footer .contact .footerHeader::after {
+  content: "";
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+  height: 2px;
+  width: 50px;
+  background-color: #d4af37;
+}
+
+@media screen and (max-width: 867px) {
+  .footer .contact .footerHeader::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.footer .contact .footerText {
+  line-height: 3rem;
+}
+
+.footer .contact .footerText .textWrap {
+  color: #333;
+}
+
+.footer .contact .footerText .textWrap .iconDescription {
+  display: inline;
+  font-size: 1.5rem;
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 867px) {
+  .footer .contact {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.footer .map {
+  width: 50%;
+}
+
+.footer .map .map-img {
+  max-width: 500px;
+  width: 100%;
+}
+
+@media screen and (max-width: 867px) {
+  .footer .map {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .footer {
+    flex-direction: column;
+  }
+}
