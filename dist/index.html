@@ -116,30 +116,90 @@
       </section>
     </div>
     <div class="bg-galShowcase">
-    <section class="sectionWrapper">
-      <div class="galleryShowcase">
-        <div class="text-center galleryText">
-          <h1 class="galleryTitle">Our Sweet Collection</h1>
-          <p class="galleryDescription">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-            quidem suscipit aliquid minus repellendus odit explicabo optio
-            excepturi quis fugiat.
-          </p>
-        </div>
-        <div class="galleryBox">
-          <div class="galleryArrow"><i class="fas fa-angle-left fa-2x"></i></div>
-          <div class="galleryWrapper">
-            <img src="./assets/latte.jpg" alt="coffee" class="galleryImg" />
-
-            <img src="./assets/latte.jpg" alt="coffee" class="galleryImg" />
-
-            <img src="./assets/latte.jpg" alt="coffee" class="galleryImg" />
+      <section class="sectionWrapper">
+        <div class="galleryShowcase">
+          <div class="text-center galleryText">
+            <h1 class="galleryTitle">Our Sweet Collection</h1>
+            <p class="galleryDescription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos quidem suscipit aliquid minus repellendus odit
+              explicabo optio excepturi quis fugiat.
+            </p>
           </div>
-          <div class="galleryArrow"><i class="fas fa-angle-right fa-2x"></i></div>
+          <div class="galleryBox">
+            <div class="galleryArrow">
+              <i class="fas fa-angle-left fa-2x"></i>
+            </div>
+            <div class="galleryWrapper">
+              <img src="./assets/latte.jpg" alt="coffee" class="galleryImg" />
+
+              <img src="./assets/latte.jpg" alt="coffee" class="galleryImg" />
+
+              <img src="./assets/latte.jpg" alt="coffee" class="galleryImg" />
+            </div>
+            <div class="galleryArrow">
+              <i class="fas fa-angle-right fa-2x"></i>
+            </div>
+          </div>
+          <div class="btn"><button class="btn-golden">MORE SWEETS</button></div>
         </div>
-        <div class="btn"><button class="btn-golden">MORE SWEETS</button></div>
-      </div>
-    </section>
-  </div>
+      </section>
+      <section class="testGallery">
+        <button class="w3-button" onclick="plusDivs(-1)">
+          <!-- &#10094; -->
+          <i class="fas fa-angle-left fa-2x"></i>
+        </button>
+
+        <div class="">
+          <img src="./assets/icecoffee.jpg" alt="coffee" class="mySlides" />
+
+          <img src="./assets/latte.jpg" alt="coffee" class="mySlides" />
+
+          <img src="./assets/cookie.jpg" alt="coffee" class="mySlides" />
+        </div>
+
+        <button class="w3-button" onclick="plusDivs(1)">
+          <!-- &#10095; -->
+          <i class="fas fa-angle-right fa-2x"></i>
+        </button>
+        <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+
+          function plusDivs(n) {
+            showDivs((slideIndex += n));
+          }
+
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+              slideIndex = 1;
+            }
+            if (n < 1) {
+              slideIndex = x.length;
+            }
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+          }
+        </script>
+      </section>
+      <div class="bgWhite">
+      <footer class="footer sectionWrapper">
+        <div class="footerHeader">VISIT US</div>
+        <div class="footerText">
+          <i class="icon fas fa-map-marker-alt fa-2x"></i>
+          <p class="iconDescription"></p>
+          <i class="fas fa-fax fa-2x"></i>
+          <p class="iconDescription"></p>
+          <i class="far fa-envelope fa-2x"></i>
+          <p class="iconDescription"></p>
+          <i class="fas fa-phone fa-2x"></i>
+        </div>
+      </footer>
+    </div>
+    </div>
   </body>
 </html>
